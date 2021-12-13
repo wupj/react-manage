@@ -3,9 +3,7 @@
  * @param {object} object
  * @param {Object} result
  */
-const isEmpty = (value: any) => {
-  return value === null || value === undefined || value === ''
-}
+const isEmpty = (value: any) => value === null || value === undefined || value === ''
 
 /**
  * 清理对象
@@ -14,7 +12,7 @@ const isEmpty = (value: any) => {
  */
 const cleanObject = (object: any) => {
   if (!object) {
-    return {};
+    return {}
   }
   const result = { ...object }
   Object.keys(result).forEach((key: string) => {
@@ -28,5 +26,5 @@ const cleanObject = (object: any) => {
 
 export default {
   isEmpty,
-  cleanObject
+  cleanObject,
 }

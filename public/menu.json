@@ -1,0 +1,25 @@
+{
+  "code": 200,
+  "data": [{
+    "name": "首页",
+    "href": "/home",
+    "path": "/home"
+  }, {
+    "name": "图表",
+    "children": [{
+      "name": "折线图",
+      "href": "/chart/lineChart",
+      "path": "/chart/lineChart"
+    }, {
+      "name": "柱图",
+      "href": "/chart/barChart",
+      "path": "/chart/barChart"
+    }]
+  }, {
+    "name": "表格",
+    "children": [{
+      "name": "基础表格",
+      "href": "/table/baseTable"
+    }]
+  }]
+}

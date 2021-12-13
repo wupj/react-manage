@@ -10,6 +10,9 @@ module.exports = {
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
+    _: true,
+    axios: true,
+    utils: true
   },
   parserOptions: {
     ecmaVersion: 2018,
@@ -19,17 +22,23 @@ module.exports = {
     'no-unused-vars': 'warn',
     'no-undef': 'warn',
     'no-labels': 'off',
+    'no-console': 'off',
     'camelcase': 'off',
     'quote-props': ['warn', 'consistent'],
-    'import/extensions': [2, "never", { 'web.js': 'never', 'json': 'never' }],
-    'import/no-extraneous-dependencies': [2, { 'devDependencies': true }],
-    'react/jsx-filename-extension': [1, { 'extensions': ['.js', '.jsx'] }]
+    'import/extensions': [2, 'never', { 'web.js': 'never', json: 'never' }],
+    'import/no-extraneous-dependencies': [2, { devDependencies: true }],
+    'react/jsx-filename-extension': [
+      2,
+      { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
+    ],
+    'react/jsx-props-no-spreading': 'off',
   },
   settings: {
     'import/resolver': {
-      'node': {
-        'extensions': ['.js', '.jsx', '.ts', '.tsx']
-      }
-    }
-  }
+      alias: {
+        map: [['@', './src']],
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
+  },
 }
