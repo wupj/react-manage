@@ -4,7 +4,7 @@ const LineChart = () => {
   useEffect(() => {
     console.log('-----init LineChart------')
   }, [])
-  return <></>
+  return <>LineChart</>
 }
 
 export default LineChart

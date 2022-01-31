@@ -1,12 +1,12 @@
 import React from 'react'
 import ProTable from '@ant-design/pro-table'
 
-export default function BaseTbale(prop: any) {
-  const { key, columns, params, request } = prop
+export default function BaseTable(prop: any) {
+  const { rowKey, columns, params, request } = prop
   return (
     <>
       <ProTable
-        rowKey={key}
+        rowKey={rowKey}
         columns={columns}
         params={params}
         request={request}
